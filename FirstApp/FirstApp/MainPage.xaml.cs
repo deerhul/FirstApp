@@ -22,14 +22,14 @@ namespace FirstApp
             if (button.Text == bomb)
             {
                 await DisplayAlert("Bomb Exploded!", "GAME OVER", "Retry");
-                bomb = new Random().Next(1, 4).ToString(); //assign new number as bomb
                 score = 0;
+                bomb = new Random().Next(1, 10).ToString(); //assign new number as bomb               
             }
             else
             {
                 score++;
-                await DisplayAlert("Dodge!", "Score: " + score, "Continue");
-                bomb = new Random().Next(1,4).ToString();
+                scoreLabel.Text = "Score: " + score;
+                bomb = new Random().Next(1,10).ToString();
             }
         }
     }

@@ -4,29 +4,74 @@
 			 xmlns:local="clr-namespace:FirstApp"
 			 x:Class="FirstApp.MainPage">
 
-	<StackLayout>
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <Label Text="Avoid triggering the bomb!"
+            <Label Text="Avoid triggering the bomb!"
 			   VerticalOptions="Center"
 			   HorizontalOptions="Center"/>
 
-        <Button Text="1"
-				VerticalOptions="CenterAndExpand"
-				HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
+            <Button Text="1"
+                Clicked="Button_Clicked"
+                Grid.Row="1" 
+                Grid.Column="1"/>
 
-		<Button Text="2"
-				VerticalOptions="CenterAndExpand"
-				HorizontalOptions="Center"
-		        Clicked="Button_Clicked"/>
+            <Button Text="2"
+		        Clicked="Button_Clicked"
+                Grid.Row="1" 
+                Grid.Column="2"/>
 
-		<Button Text="3"
-				VerticalOptions="CenterAndExpand"
-				HorizontalOptions="Center"
-		        Clicked="Button_Clicked"/>
+            <Button Text="3"
+		        Clicked="Button_Clicked"
+                Grid.Row="1" 
+                Grid.Column="3"/>
 
-		<Label Text="Created by Daryl" 
+            <Button Text="4"
+                Clicked="Button_Clicked"
+                Grid.Row="2" 
+                Grid.Column="1"/>
+
+            <Button Text="5"
+	            Clicked="Button_Clicked"
+                Grid.Row="2" 
+                Grid.Column="2"/>
+
+            <Button Text="6"
+	            Clicked="Button_Clicked"
+                Grid.Row="2" 
+                Grid.Column="3"/>
+
+            <Button Text="7"
+                Clicked="Button_Clicked"
+                Grid.Row="3" 
+                Grid.Column="1"/>
+
+            <Button Text="8"
+	            Clicked="Button_Clicked"
+                Grid.Row="3" 
+                Grid.Column="2"/>
+
+            <Button Text="9"
+	            Clicked="Button_Clicked"
+                Grid.Row="3" 
+                Grid.Column="3"/>
+        </Grid>
+
+        <Label x:Name="scoreLabel"
+               Text="Score: 0"
+               VerticalOptions="End"
+               HorizontalOptions="End"/>
+        
+        <Label Text="Created by Daryl" 
 			   VerticalOptions="Center" 
 			   HorizontalOptions="Center" />
-	</StackLayout>
+    </StackLayout>
 </ContentPage>
